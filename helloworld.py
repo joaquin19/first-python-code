@@ -1,24 +1,24 @@
 print("Hello World puñetas")
 print("=" * 19)
 
-# esta parte son variables
+# VARIABLES
 nombre, apellido = 'Joaquin', 'Navedo'
 print(nombre, apellido)
 
-# esta parte son tipos primitivos
+# TIPOS PRIMTIVOS
 nombre = 'Joaquin'  # literal string
 edad = 28  # literal int
 pi = 3.1416  # literal decimal
 usoreloj = True  # literal boolean
 usorelojs = None  # literal null or empty
 
-# esta parte son los tipos dinamicos
+# TIPOS DINAMICOS
 nombre = 'Joaquin'
 print(type(nombre))
 nombre = 10
 print(type(nombre))
 
-# esta arte es de Listas
+# LISTAS
 letras = ['a', 'b', 'c']
 print(letras[0])  # letra a
 print(letras[1])  # letra b
@@ -28,7 +28,13 @@ print(letras[-1])  # letra c
 print(letras[-2])  # letra b
 print(letras[-3])  # letra a
 
-# Listas anidadas o sublistas
+# MULTIPLE INDICES
+palabra = 'python'
+print(palabra[0:2])  # se exculye la letra en la posicion 2 => 'py'
+print(palabra[2:])  # se excluye antes del 2 'thon'
+print(palabra[:2])  # se excluye despues del 2 => 'py'
+
+# LISTAS ANIDADAS O SUBLISTAS
 nombre, apellido, edad = 'Joaquin', 'Navedo', 28
 personas = [
     [nombre, apellido, edad],
@@ -36,13 +42,30 @@ personas = [
     ['Sandra', 'Torres', 27]
 ]
 
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = [7, 8, 9]
+d = a, b, c
+e = a + b + c
+print(d)
+print(e)
+
 print(personas[2][2])  # ambso debuelben la misma respuesta
 print(personas[-1][-1])
 print(personas[0][0])
 print(len(personas))
 print(len(personas[0]))
 
-# Diccionarios
+letras = ['a', 'b', 'c', 'd', 'e']
+print(letras[:3])
+# haciendo esto seleccionamos los tres primeras posiciones y las cambiamos a maysculas
+letras[:3] = ['A', 'B', 'C']
+print(letras)
+letras[:3] = []  # vacioamos el valor de las primeras 3 posiciones
+print(letras)
+
+
+# DICCIONARIOS
 colores = {
     'rojo': 'red',
     'azul': 'blue',
@@ -54,7 +77,13 @@ print(colores['gris'])
 print(colores['negro'])
 print(len(colores))  # sale 4 por que sobre escribi el gris
 
-# Funciones
+# LECTURA POR TECLADO
+# valor = input('Introduce un valor: ')
+# valor = int(valor)
+valor = float(input('Introduce un valor: '))
+print(valor)
+
+# FUNCIONES
 
 
 def sayHi(nombre, apellido):
@@ -63,7 +92,7 @@ def sayHi(nombre, apellido):
 
 sayHi('Joaquin', 'Navedo')
 
-# Funciones con retorno
+# FUNCIONES CON RETORNO
 
 
 def doblar(numero):
