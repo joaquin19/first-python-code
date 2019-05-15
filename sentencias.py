@@ -116,3 +116,12 @@ print(numeros)
 cadena = 'hola que hace?'
 for caracter in cadena:
     print(caracter)
+
+cadena2 = ''
+for caracter in cadena:
+    cadena2 += '*'
+print(cadena)
+print(cadena2)
+
+for i in range(10):
+    print(i)
